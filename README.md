@@ -9,7 +9,7 @@
 | ------ | ------ | ------ |
 | Задание 1 | * | 60 |
 | Задание 2 | * | 20 |
-| Задание 3 | * | 20 |
+| Задание 3 | # | 20 |
 
 знак "*" - задание выполнено; знак "#" - задание не выполнено;
 
@@ -34,23 +34,82 @@
 ### *Познакомиться с программными средствами для организции передачи данных между инструментами Google, Python и Unity*
 
 ## Задание 1
-### *Реализовать совместную работу и передачу данных в связке Python - Google-Sheets – Unity.*
+### *Реализовать совместную работу и передачу данных в связке Python – Google-Sheets – Unity.*
 
-### 1. В сервисе Google Cloud были подключены необходимые API для работы с Google Sheets и Google Cloud.
+### 1. В сервисе Google Cloud были подключены необходимые API для работы с Google Sheets и Google Cloud, был создан API-ключ.
 
-### 2. Была реализована запись данных из [Python-скрипта](https://github.com/krakyz/AD_LR1/blob/main/main.py) в [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTSQFc8K0YwUdlbgVRLlhKqBOEK4F94iu9LIe14el8L4Z2nmmoX6mhRj-waHR-DtPOXNzfus6IORPTJ/pubhtml?gid=0&single=true)
+### 2. Была реализована запись данных из [Python-скрипта](https://github.com/krakyz/AD_LR1/blob/11119d9dce5f234aca05480fdb8668e65b8cde03/Task%201/main.py) в [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTSQFc8K0YwUdlbgVRLlhKqBOEK4F94iu9LIe14el8L4Z2nmmoX6mhRj-waHR-DtPOXNzfus6IORPTJ/pubhtml?gid=0&single=true)
 Данные описывают изменение темпа инфляции на протяжении 11 отсчётных периодов, с учётом стоимости игрового объекта в каждый период.
 
-### 3. Создан новый [Unity-проект](https://github.com/krakyz/AD_LR1/tree/main/UnityDataScience/Assets)¹, получающий данные из [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTSQFc8K0YwUdlbgVRLlhKqBOEK4F94iu9LIe14el8L4Z2nmmoX6mhRj-waHR-DtPOXNzfus6IORPTJ/pubhtml?gid=0&single=true)
+### 3. Создан новый [Unity-проект](https://github.com/krakyz/AD_LR1/tree/main/Task%201/UnityDataScience/Assets)¹, получающий данные из [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTSQFc8K0YwUdlbgVRLlhKqBOEK4F94iu9LIe14el8L4Z2nmmoX6mhRj-waHR-DtPOXNzfus6IORPTJ/pubhtml?gid=0&single=true)
 
-### 4. Написан [Unity-скрипт](https://github.com/krakyz/AD_LR1/blob/main/UnityDataScience/Assets/Script/NewBehaviourScript.cs), воспроизводящий аудио-файл в зависимости от значения данных из таблицы [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTSQFc8K0YwUdlbgVRLlhKqBOEK4F94iu9LIe14el8L4Z2nmmoX6mhRj-waHR-DtPOXNzfus6IORPTJ/pubhtml?gid=0&single=true).
+### 4. Написан [Unity-скрипт](https://github.com/krakyz/AD_LR1/blob/11119d9dce5f234aca05480fdb8668e65b8cde03/Task%201/UnityDataScience/Assets/Script/NewBehaviourScript.cs), воспроизводящий аудио-файл в зависимости от значения данных из таблицы [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTSQFc8K0YwUdlbgVRLlhKqBOEK4F94iu9LIe14el8L4Z2nmmoX6mhRj-waHR-DtPOXNzfus6IORPTJ/pubhtml?gid=0&single=true).
 
 
 ## Задание 2
 ### *Реализовать запись в Google-таблицу набора данных, полученных с помощью линейной регрессии из лабораторной работы № 1*
 
-## Задание 3
-### *Самостоятельно разработать сценарий воспроизведения звукового сопровождения в Unity в зависимости от изменения считанных данных в задании 2*
+### 1. Был создан ещё один ключ для использования в скрипте.
+
+### 2. Код, используемый в лабораторный работе №1 был [изменен и дополнен](https://github.com/krakyz/AD_LR1/blob/main/Task%202/LR2_T2.py) для использования API.
+
+```py
+import numpy as np
+import matplotlib.pyplot as plt
+import gspread
+
+
+def model(a, b, x):
+    return a * x + b
+
+
+def loss_function(a, b, x, y):
+    num = len(x)
+    prediction = model(a, b, x)
+    return (0.5 / num) * (np.square(prediction - y)).sum()
+
+
+def optimize(a, b, x, y, Lr):
+    num = len(x)
+    prediction = model(a, b, x)
+    da = (1.0 / num) * ((prediction - y) * x).sum()
+    db = (1.0 / num) * (prediction - y).sum()
+    a = a - Lr * da
+    b = b - Lr * db
+    return a, b
+
+
+def iterate(a, b, x, y, times, Lr):
+    for i in range(times):
+        a, b = optimize(a, b, x, y, Lr)
+    return a, b
+
+
+gc = gspread.service_account(filename='avian-influence-365213-de6d57216284.json')
+sh = gc.open('LR2_T2')
+
+x = [3, 21, 22, 34, 54, 34, 55, 67, 89, 99]
+x = np.array(x)
+y = [2, 22, 24, 65, 79, 82, 55, 130, 150, 99]
+y = np.array(y)
+Lr = 0.000001
+
+times = [1, 2, 3, 4, 5, 6, 10, 100, 1000, 10000]
+
+for i in range(1, len(times) + 1):
+    a, b = np.random.rand(1), np.random.rand(1)
+    a, b = iterate(a, b, x, y, times[i - 1], Lr)
+    prediction = model(a, b, x)
+
+    sh.sheet1.update(('A' + str(i)), str(i))
+    sh.sheet1.update(('B' + str(i)), str(a[0]))
+    sh.sheet1.update(('C' + str(i)), str(b[0]))
+    sh.sheet1.update(('D' + str(i)), str(loss_function(a, b, x, y)))
+    print(loss_function(a, b, x, y))
+```
+
+
+
 
 ## Выводы
 
