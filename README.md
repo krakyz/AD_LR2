@@ -38,13 +38,12 @@
 
 ### 1. В сервисе Google Cloud были подключены необходимые API для работы с Google Sheets и Google Cloud.
 
-### 2. Была реализована запись данных из [Python-скрипта](https://github.com/krakyz/DA-in-GameDev-lab1/blob/2nd/Unity/main.py) в [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTSQFc8K0YwUdlbgVRLlhKqBOEK4F94iu9LIe14el8L4Z2nmmoX6mhRj-waHR-DtPOXNzfus6IORPTJ/pubhtml?gid=0&single=true)
+### 2. Была реализована запись данных из [Python-скрипта](https://github.com/krakyz/AD_LR1/blob/main/main.py) в [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTSQFc8K0YwUdlbgVRLlhKqBOEK4F94iu9LIe14el8L4Z2nmmoX6mhRj-waHR-DtPOXNzfus6IORPTJ/pubhtml?gid=0&single=true)
 Данные описывают изменение темпа инфляции на протяжении 11 отсчётных периодов, с учётом стоимости игрового объекта в каждый период.
 
-### 3. Создан новый [Unity-проект](https://github.com/krakyz/DA-in-GameDev-lab1/tree/2nd/UnityDataScience/Assets)¹, получающий данные из [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTSQFc8K0YwUdlbgVRLlhKqBOEK4F94iu9LIe14el8L4Z2nmmoX6mhRj-waHR-DtPOXNzfus6IORPTJ/pubhtml?gid=0&single=true)
+### 3. Создан новый [Unity-проект](https://github.com/krakyz/AD_LR1/tree/main/UnityDataScience/Assets)¹, получающий данные из [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTSQFc8K0YwUdlbgVRLlhKqBOEK4F94iu9LIe14el8L4Z2nmmoX6mhRj-waHR-DtPOXNzfus6IORPTJ/pubhtml?gid=0&single=true)
 
-### 4. Написан [Unity-скрипт](https://github.com/krakyz/DA-in-GameDev-lab1/blob/2nd/UnityDataScience/Assets/Script/NewBehaviourScript.cs), воспроизводящий аудио-файл в зависимости от значения данных из таблицы [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTSQFc8K0YwUdlbgVRLlhKqBOEK4F94iu9LIe14el8L4Z2nmmoX6mhRj-waHR-DtPOXNzfus6IORPTJ/pubhtml?gid=0&single=true).
-
+### 4. Написан [Unity-скрипт](https://github.com/krakyz/AD_LR1/blob/main/UnityDataScience/Assets/Script/NewBehaviourScript.cs), воспроизводящий аудио-файл в зависимости от значения данных из таблицы [Google Sheets](https://docs.google.com/spreadsheets/d/e/2PACX-1vTSQFc8K0YwUdlbgVRLlhKqBOEK4F94iu9LIe14el8L4Z2nmmoX6mhRj-waHR-DtPOXNzfus6IORPTJ/pubhtml?gid=0&single=true).
 
 
 ## Задание 2
