@@ -26,9 +26,8 @@
 - Код реализации выполнения задания. Визуализация результатов выполнения (если применимо)
 - Задание 2
 - Код реализации выполнения задания. Визуализация результатов выполнения (если применимо)
-- Задание 3
-- Код реализации выполнения задания. Визуализация результатов выполнения (если применимо)
 - Выводы
+- Сноски
 
 ## Цель работы
 ### *Познакомиться с программными средствами для организции передачи данных между инструментами Google, Python и Unity*
@@ -82,13 +81,11 @@ public class NewBehaviourScript : MonoBehaviour
     private bool statusStart = false;
     private int i = 1;
 
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(GoogleSheets());
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (dataSet["Mon_" + i.ToString()] <= 10 & statusStart == false & i != dataSet.Count)
