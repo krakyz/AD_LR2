@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "avian-influence-365213",
+  "private_key_id": "6502a69b35aa21c37bc5a13450c629e50bfb7404",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC8YpiGrnYLlVpK\nBJN4lRJbnN/mnSdEgtM7Oo3eLo8CuLyiXUM7PAPsiYY5am7X+ndKZ+h/gfV6wvKJ\nmS2se22q12iXHPcE5oLJ8kznXqps/FIfzGTnvxA2LFNmF4vfOKs7hzlVhhN5c0Mz\npTUP43b7fc/PwGy702GxrIv7K5sYInVCJLrziYh2TUeNVbDbOCmBPOkrfLFq5I4E\nXQhTEoqvhhCY1RxrojyAwlYzWx68z96RZ6QR117u2ju/rWXVcQUKvQ2cpbfE55S4\n5wdV36VIsCNHkMjPjD/OIMZnTjZl4e0msCWdSqiJ28rK0PHnA9hmBJGn+uCU84t9\nSoZUnvcFAgMBAAECggEAChECsX+1Ex1h+76O2sysdHTHih0vsfuDqhCQ8CRww+Z3\nPf3Zz9p/Iy6eG4dScPwTT8iJpfad1XeBWlTzGdpmm9By6FBF6t8ecggej+aBGN3K\nzaQwaCnPhfWMZ1IuyTjP/ZhWOfm2JLFCEApt8XFoNDwe1K0lokvDVqkvubY0zW9C\nbuc7RD3SCZWSoU+xWJc4wtOPh+GTLoMOGK/RMZ8iBMqDTHFNTdtpzjeokvMK0mWq\nKYj9i2MxvO03R92aWRxcSEP4pcQouegnd+LKjExi8UJSKqSylJP7bS/oEbh5nu6t\nwJ9X9aWe+vvcMbWPriwOucdtA2btQbNOOUJ96mrjgQKBgQDoZHgkcWoH4bCekmXt\nbGP+toSbJKks3PN7ZKLQ5wWZ5oAOxrpYQGSBxpXmX13SEI5rsRjUYk++8oQWHISF\ns22R+sYGQ7dgXRpoBQQEL7+haXqpNbIZb0XQkRMGUQertS/3ThLwxvRkSN7AOASz\ndFuMw8x+06olhhX0BDRuO2VYUQKBgQDPha9adS2EbN+a4VPdJM8Y86IOUsVCLB15\nRtfCEBDEo0Oyp87n51nTK4T6PLLAzGJzFLXODMC1LRkqYgj84ezVHkY0GrxzU0TQ\nTMuWllcK6l/FcIuy8BjRsXq5rm6mODPiTl93bttDxWLbrIwbFiFucRWDDVatROtX\nGkuEqQd6dQKBgQCOubW33Bfcw1Wv7gW/rYQ0WXBTwE5OiVzYedQtLNWZ0aDwckjc\nDqArvAUwOX3rl9OAfIHdXovPoC5TTixt2OcAct3P1yL2gffHztzKnXC594goCBxb\n1qUwFQl0JavqXxsYbdDgI7DRLpfvwffRJzNa3p3nfqPO6+zrsvFoif4SIQKBgQCl\n/zKoMgkp34jxtAJIZ/Q86k2cFXtyliUxaIiX1BAFqu8xDmhEOlwwvaQOItV9wT+S\n/GL9IlhX1G5H58l2tyWhyCix7x0FRvtJf9RubW3M7nOTVJZ6mPHRcp1PwAcEcPqX\nsMdOmt9Lk62jOJ+N3yL42/4wKVBHI1T5BLCZujegLQKBgQCKaQiQULsBQqPbnNXR\ndahiENB6ZTj2b75vgCM0FEcncdvWD7i83E0bVFQEkpxKNXsAqgZyxjgeudQ5QANK\n3dxd6mY9ZLPAmnw81hnA958j8eNuCCY34+cO1oKnUsmqxTLcatD38cLOEWbrGy9T\nwP1zqYCJOi5jCkqN/Fu3YScjDg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "unitisevicedarascience@avian-influence-365213.iam.gserviceaccount.com",
+  "client_id": "116901607190184550013",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/unitisevicedarascience%40avian-influence-365213.iam.gserviceaccount.com"
+}
